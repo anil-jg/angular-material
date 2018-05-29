@@ -1,0 +1,13 @@
+body
+{
+	font-family: arial;
+}
+.section
+{
+	margin-bottom: 20px;
+	margin-top: 15px;
+}
+.mat-form-field-wrapper
+{
+	padding-bottom: 0px !important;
+}

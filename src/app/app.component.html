@@ -1,0 +1,348 @@
+<div style="margin:auto;width:1000px">
+  <mat-horizontal-stepper>
+    <mat-step formGroupName="0">
+      <ng-template matStepLabel>Tab 1</ng-template>
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <div class="clearfix">
+        <h3>Contact Information</h3>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="First name">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Last name">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Middle name">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="DOB">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Mobile Number">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Home Number">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Email1">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Email2">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="SkypeId">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Address">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="State">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="City">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Postal Code">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Country">
+        </mat-form-field>
+        <h3>Employment</h3>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Jobtitle">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Total Exp">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Work Authorisation">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Education Level">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Hourly Rate">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Annual Salary">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Security Clearance">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <mat-select placeholder="Employment Type" [value]=data>
+            <mat-option>
+              Fulltime
+            </mat-option>
+            <mat-option>
+              Parttime
+            </mat-option>
+            <mat-option>
+              Contract –1099
+            </mat-option>
+            <mat-option>
+              Contract – C2C
+            </mat-option>
+            <mat-option>
+              Contract –W2
+            </mat-option>
+            <mat-option>
+              Contract –to-Hire
+            </mat-option>
+
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Willing to Travel">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Job Type">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Willing to Relocate">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Source">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="UserId">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Ownership">
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-button mat-raised-button type="button">Finish</button>
+      </div>
+    </mat-step>
+    <mat-step formGroupName="1">
+      <ng-template matStepLabel>Tab 2</ng-template>
+      <div class="clearfix">
+        <h3>Experience Details</h3>
+        <div class="section">
+          <div class="clearfix section-header">
+            <div class="half-width section-title">Resume</div>
+            <div class="right link" (click)="openDialog()">Add More</div>
+          </div>
+          <table class="full-width">
+            <thead>
+              <tr>
+                <th>Attachment</th>
+                <th>Source</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Resume1.docx
+                </td>
+                <td>
+                  Direct Sourcing
+                </td>
+                <td>
+                  <mat-icon>create</mat-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Resume2.docx
+                </td>
+                <td>
+                  Indirect Sourcing
+                </td>
+                <td>
+                  <mat-icon>create</mat-icon>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="section">
+          <div class="clearfix section-header">
+            <div class="half-width section-title">Documents</div>
+            <div class="right link">Add More</div>
+          </div>
+          No Records Found
+        </div>
+        <div class="section">
+          <div class="clearfix section-header">
+            <div class="half-width section-title">Education</div>
+            <div class="right link">Add More</div>
+          </div>
+          No Records Found
+        </div>
+        <div class="section">
+          <div class="clearfix section-header">
+            <div class="half-width section-title">Work Experience</div>
+            <div class="right link">Add More</div>
+          </div>
+          <table class="full-width">
+            <thead>
+              <tr>
+                <th>Employer</th>
+                <th>Title</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>State</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Tenet Health Care
+                </td>
+                <td>
+                  Sr. Java Developer
+                </td>
+                <td>
+                  08/01/2018
+                </td>
+                <td>
+                  07/01/2019
+                </td>
+                <td>
+                  Chicago
+                </td>
+                <td>
+                  USA
+                </td>
+                <td>
+                  Atalanta
+                </td>
+                <td>
+                  <mat-icon>create</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  Newtech Inc
+                </td>
+                <td>
+                  Sr. Java Architect
+                </td>
+                <td>
+                  08/01/2018
+                </td>
+                <td>
+                  07/01/2019
+                </td>
+                <td>
+                  Chicago
+                </td>
+                <td>
+                  USA
+                </td>
+                <td>
+                  Atalanta
+                </td>
+                <td>
+                  <mat-icon>create</mat-icon>
+                  <mat-icon>delete</mat-icon>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="section">
+          <div class="clearfix section-header">
+            <div class="half-width section-title">Reference Details</div>
+            <div class="right link">Add More</div>
+          </div>
+          No Records Found
+        </div>
+        <div class="section">
+          <div class="clearfix section-header">
+            <div class="half-width section-title">Certification Details</div>
+            <div class="right link">Add More</div>
+          </div>
+          No Records Found
+        </div>
+      </div>
+      <div>
+        <button mat-button mat-raised-button type="button">Finish</button>
+      </div>
+    </mat-step>
+    <mat-step formGroupName="2">
+      <ng-template matStepLabel>Tab 3</ng-template>
+      <div class="clearfix">
+      	<h3>HR</h3>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="DOB">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="SSN">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="DOE">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="DOT">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Hourly Salary">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Annual Salary">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Bonus">
+      	</mat-form-field>
+      	<mat-form-field class="col-12">
+      	  <input matInput placeholder="Notes">
+      	</mat-form-field>
+      	
+      </div>
+      <div>
+        <button mat-button mat-raised-button matStepperNext type="button">Finish</button>
+      </div>
+    </mat-step>
+    <mat-step formGroupName="3">
+      <ng-template matStepLabel>Tab 4</ng-template>
+      <div class="clearfix">
+      	<h3>Immigration</h3>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Work Authorization">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Visa Expiry">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="LCA Amend/Ext Filed Date">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Location">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Labor/GC filed Date">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Status of Labor/GC">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="I-485 filed Date">
+      	</mat-form-field>
+      	<mat-form-field class="col-6">
+      	  <input matInput placeholder="Status of I-485">
+      	</mat-form-field>
+      	
+      </div>
+      <div>
+        <button mat-button mat-raised-button type="button">Finish</button>
+      </div>
+    </mat-step>
+    <mat-step formGroupName="4">
+      <ng-template matStepLabel>Tab 5</ng-template>
+      <mat-form-field class="col-12">
+      	  <input matInput placeholder="Notes">
+      	</mat-form-field>
+      <div>
+        <button mat-button matStepperNext type="button">Finish</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
