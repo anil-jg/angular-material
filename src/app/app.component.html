@@ -4,115 +4,123 @@
       <ng-template matStepLabel>Tab 1</ng-template>
       <ng-template matStepLabel>Fill out your name</ng-template>
       <div class="clearfix">
-        <h3>Contact Information</h3>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="First name">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Last name">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Middle name">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="DOB">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Mobile Number">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Home Number">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Email1">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Email2">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="SkypeId">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Address">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="State">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="City">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Postal Code">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Country">
-        </mat-form-field>
-        <h3>Employment</h3>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Jobtitle">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Total Exp">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Work Authorisation">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Education Level">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Hourly Rate">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Annual Salary">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Security Clearance">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <mat-select placeholder="Employment Type" [value]=data>
-            <mat-option>
-              Fulltime
-            </mat-option>
-            <mat-option>
-              Parttime
-            </mat-option>
-            <mat-option>
-              Contract –1099
-            </mat-option>
-            <mat-option>
-              Contract – C2C
-            </mat-option>
-            <mat-option>
-              Contract –W2
-            </mat-option>
-            <mat-option>
-              Contract –to-Hire
-            </mat-option>
-
-          </mat-select>
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Willing to Travel">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Job Type">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Willing to Relocate">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Source">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="UserId">
-        </mat-form-field>
-        <mat-form-field class="col-6">
-          <input matInput placeholder="Ownership">
-        </mat-form-field>
+        <h3 class="subtitle">Contact Information</h3>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="First Name">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Last Name">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Middle Name">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="DOB">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Mobile Number">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Home Number">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Email1">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Email2">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Address">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="State">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="City">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Country">
+        </div>
+        <h3 class="subtitle">Employment</h3>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Job Title">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Total Experience">
+        </div>
+        <div class="col-6">
+          <div class='select full-width'>
+            <select class="full-width">
+              <option>Work Authorisation</option>
+              <option>Need H1B Visa</option>
+              <option>Have H1B Visa</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="select full-width">
+            <select class="full-width">
+              <option>Education</option>
+              <option>Bachelore</option>
+              <option>Masters</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Hourly Rate">
+        </div>
+        <div class="col-6">
+          <input class="input" type="text" placeholder="Annual Salary">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Security Clearance">
+        </div>
+    
+        <div class="col-6">
+          <input class="input" placeholder="Willing to Travel">
+        </div>
+        <div class="col-6">
+          <div class="select full-width">
+            <select class="full-width">
+              <option>
+                Fulltime
+              </option>
+              <option>
+                Parttime
+              </option>
+              <option>
+                Contract –1099
+              </option>
+              <option>
+                Contract – C2C
+              </option>
+              <option>
+                Contract –W2
+              </option>
+              <option>
+                Contract –to-Hire
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Job Type">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Willing to Relocate">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Source">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="UserId">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Ownership">
+        </div>
       </div>
-      <div>
-        <button mat-button mat-raised-button type="button">Finish</button>
+      <div class="text-center">
+        <button type="button" class="right button is-primary">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="1">
@@ -263,85 +271,83 @@
           No Records Found
         </div>
       </div>
-      <div>
-        <button mat-button mat-raised-button type="button">Finish</button>
+      <div class="text-center">
+        <button type="button" class="right button is-primary">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="2">
       <ng-template matStepLabel>Tab 3</ng-template>
       <div class="clearfix">
-      	<h3>HR</h3>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="DOB">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="SSN">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="DOE">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="DOT">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Hourly Salary">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Annual Salary">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Bonus">
-      	</mat-form-field>
-      	<mat-form-field class="col-12">
-      	  <input matInput placeholder="Notes">
-      	</mat-form-field>
-      	
+        <h3>HR</h3>
+        <div class="col-6">
+          <input class="input" placeholder="DOB">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="SSN">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="DOE">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="DOT">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Hourly Salary">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Annual Salary">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Bonus">
+        </div>
+        <div class="col-12">
+          <input class="input" placeholder="Notes">
+        </div>
       </div>
       <div>
-        <button mat-button mat-raised-button matStepperNext type="button">Finish</button>
+        <button matStepperNext type="button" class="right">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="3">
       <ng-template matStepLabel>Tab 4</ng-template>
       <div class="clearfix">
-      	<h3>Immigration</h3>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Work Authorization">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Visa Expiry">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="LCA Amend/Ext Filed Date">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Location">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Labor/GC filed Date">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Status of Labor/GC">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="I-485 filed Date">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Status of I-485">
-      	</mat-form-field>
-      	
+        <h3>Immigration</h3>
+        <div class="col-6">
+          <input class="input" placeholder="Work Authorization">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Visa Expiry">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="LCA Amend/Ext Filed Date">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Location">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Labor/GC filed Date">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Status of Labor/GC">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="I-485 filed Date">
+        </div>
+        <div class="col-6">
+          <input class="input" placeholder="Status of I-485">
+        </div>
       </div>
-      <div>
-        <button mat-button mat-raised-button type="button">Finish</button>
+      <div class="text-center">
+        <button type="button" class="right button is-primary">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="4">
       <ng-template matStepLabel>Tab 5</ng-template>
-      <mat-form-field class="col-12">
-      	  <input matInput placeholder="Notes">
-      	</mat-form-field>
+      <div class="col-12">
+        <input class="input" placeholder="Notes">
+      </div>
       <div>
-        <button mat-button matStepperNext type="button">Finish</button>
+        <button mat-button matStepperNext type="button" class="right">Finish</button>
       </div>
     </mat-step>
   </mat-horizontal-stepper>
