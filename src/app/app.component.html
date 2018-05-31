@@ -15,7 +15,9 @@
           <input matInput placeholder="Middle name">
         </mat-form-field>
         <mat-form-field class="col-6">
-          <input matInput placeholder="DOB">
+          <input matInput [matDatepicker]="user_dob" placeholder="DOB">
+          <mat-datepicker-toggle matSuffix [for]="user_dob"></mat-datepicker-toggle>
+          <mat-datepicker #user_dob></mat-datepicker>
         </mat-form-field>
         <mat-form-field class="col-6">
           <input matInput placeholder="Mobile Number">
@@ -70,7 +72,7 @@
           <input matInput placeholder="Security Clearance">
         </mat-form-field>
         <mat-form-field class="col-6">
-          <mat-select placeholder="Employment Type" [value]=data>
+          <mat-select placeholder="Employment Type">
             <mat-option>
               Fulltime
             </mat-option>
@@ -89,7 +91,6 @@
             <mat-option>
               Contract –to-Hire
             </mat-option>
-
           </mat-select>
         </mat-form-field>
         <mat-form-field class="col-6">
@@ -112,7 +113,7 @@
         </mat-form-field>
       </div>
       <div>
-        <button mat-button mat-raised-button type="button">Finish</button>
+        <button mat-button mat-raised-button class="right" type="button">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="1">
@@ -264,84 +265,93 @@
         </div>
       </div>
       <div>
-        <button mat-button mat-raised-button type="button">Finish</button>
+        <button mat-button mat-raised-button class="right" type="button">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="2">
       <ng-template matStepLabel>Tab 3</ng-template>
       <div class="clearfix">
-      	<h3>HR</h3>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="DOB">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="SSN">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="DOE">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="DOT">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Hourly Salary">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Annual Salary">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Bonus">
-      	</mat-form-field>
-      	<mat-form-field class="col-12">
-      	  <input matInput placeholder="Notes">
-      	</mat-form-field>
-      	
+        <h3>HR</h3>
+        <mat-form-field class="col-6">
+          <input matInput [matDatepicker]="dob" placeholder="DOB">
+          <mat-datepicker-toggle matSuffix [for]="dob"></mat-datepicker-toggle>
+          <mat-datepicker #dob></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="SSN">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="DOE">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="DOT">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Hourly Salary">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Annual Salary">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Bonus">
+        </mat-form-field>
+        <mat-form-field class="col-12">
+          <textarea matInput placeholder="Notes" rows="10">29/05/2018 10:30PM : </textarea>
+        </mat-form-field>
       </div>
       <div>
-        <button mat-button mat-raised-button matStepperNext type="button">Finish</button>
+        <button mat-button mat-raised-button matStepperNext class="right" type="button">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="3">
       <ng-template matStepLabel>Tab 4</ng-template>
       <div class="clearfix">
-      	<h3>Immigration</h3>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Work Authorization">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Visa Expiry">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="LCA Amend/Ext Filed Date">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Location">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Labor/GC filed Date">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Status of Labor/GC">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="I-485 filed Date">
-      	</mat-form-field>
-      	<mat-form-field class="col-6">
-      	  <input matInput placeholder="Status of I-485">
-      	</mat-form-field>
-      	
+        <h3>Immigration</h3>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Work Authorization">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Visa Expiry">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput [matDatepicker]="lca_amend" placeholder="LCA Amend/Ext Filed Date">
+          <mat-datepicker-toggle matSuffix [for]="lca_amend"></mat-datepicker-toggle>
+          <mat-datepicker #lca_amend></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Location">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput [matDatepicker]="labour_gc_filed" placeholder="Labor/GC filed Date">
+          <mat-datepicker-toggle matSuffix [for]="labour_gc_filed"></mat-datepicker-toggle>
+          <mat-datepicker #labour_gc_filed></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Status of Labor/GC">
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput [matDatepicker]="i485_filed" placeholder="I-485 filed Date">
+          <mat-datepicker-toggle matSuffix [for]="i485_filed"></mat-datepicker-toggle>
+          <mat-datepicker #i485_filed></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="col-6">
+          <input matInput placeholder="Status of I-485">
+        </mat-form-field>
       </div>
       <div>
-        <button mat-button mat-raised-button type="button">Finish</button>
+        <button mat-button mat-raised-button class="right" type="button">Finish</button>
       </div>
     </mat-step>
     <mat-step formGroupName="4">
       <ng-template matStepLabel>Tab 5</ng-template>
-      <mat-form-field class="col-12">
-      	  <input matInput placeholder="Notes">
-      	</mat-form-field>
+      <h3>Notes</h3>
+      <div class="clearfix">
+        <mat-form-field class="col-12">
+          <textarea matInput placeholder="Notes" rows="10">29/05/2018 10:30PM : </textarea>
+        </mat-form-field>
+      </div>
       <div>
-        <button mat-button matStepperNext type="button">Finish</button>
+        <button mat-button matStepperNext class="right" type="button">Finish</button>
       </div>
     </mat-step>
   </mat-horizontal-stepper>
