@@ -97,6 +97,10 @@ body
 {
 	margin-bottom: 10px;
 }
+.ml-20
+{
+	margin-left: 20px;
+}
 .mr-20
 {
 	margin-bottom: 20px;
@@ -104,4 +108,30 @@ body
 .mb-20
 {
 	margin-bottom: 20px;
+}
+
+
+
+.tabs li.is-active a
+{
+	color: white;
+	background: #3273dc;
+}
+.tabs.is-boxed li.is-active a
+{
+	background: #3273dc;	
+}
+
+.tab-content
+{
+	display: none;
+}
+.tab-content.is-active
+{
+	display: block;
+}
+
+textarea
+{
+	resize: vertical;
 }

@@ -7,9 +7,19 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  activetab:number = 1
 	constructor(public dialog: MatDialog){
 
 	}
+  isActive(num){
+    return num==this.activetab?"is-active":"";
+  }
+  isTabContentActive(num){
+    return num==this.activetab?"tab-content is-active clearfix":"tab-content";
+  }
+  changeTab(num){
+   this.activetab = num; 
+  }
   openDialog():void {
   	let dialogRef = this.dialog.open(AppDialog, {
       width: '600px'});
@@ -19,6 +29,13 @@ export class AppComponent {
       width: '600px'});
   }
 }
+
+
+
+
+
+
+
 
 @Component({
   selector: 'AppDialog',

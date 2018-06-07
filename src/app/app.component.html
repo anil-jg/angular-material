@@ -1,34 +1,59 @@
-<div style="margin:auto;width:1000px">
-  <mat-horizontal-stepper>
-    <mat-step formGroupName="0">
-      <ng-template matStepLabel>Tab 1</ng-template>
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <div class="clearfix">
-        <h3 class="subtitle">Contact Information</h3>
-        <div class="col-6">
-          <input class="input" type="text" title="First Name" placeholder="First Name">
-        </div>
-        <div class="col-6">
-          <input class="input" type="text" title="Last Name" placeholder="Last Name">
-        </div>
-        <div class="col-6">
-          <input class="input" type="text" title="Middle Name" placeholder="Middle Name">
-        </div>
-        <div class="col-6">
-          <input class="input" type="text" title="Skype ID" placeholder="Skype ID">
-        </div>
-        <div class="col-6">
-          <input class="input" type="text" title="Mobile Number" placeholder="Mobile Number">
-        </div>
-        <div class="col-6">
-          <input class="input" type="text" title="Home Number" placeholder="Home Number">
-        </div>
-        <div class="col-6">
-          <input class="input" type="text" title="Email1" placeholder="Email1">
-        </div>
-        <div class="col-6">
-          <input class="input" type="text" title="Email2" placeholder="Email2">
-        </div>
+<div style="margin:auto;width:800px;margin-top: 30px">
+  <div class="tabs is-boxed is-fullwidth">
+    <ul>
+      <li [class]="isActive(1)" (click)="changeTab(1)">
+        <a>
+              <span>Tab 1</span>
+            </a>
+      </li>
+      <li [class]="isActive(2)" (click)="changeTab(2)">
+        <a>
+              <span>Tab 2</span>
+            </a>
+      </li>
+      <li [class]="isActive(3)" (click)="changeTab(3)">
+        <a>
+              <span>Tab 3</span>
+            </a>
+      </li>
+      <li [class]="isActive(4)" (click)="changeTab(4)">
+        <a>
+              <span>Tab 4</span>
+            </a>
+      </li>
+      <li [class]="isActive(5)" (click)="changeTab(5)">
+        <a>
+              <span>Tab 5</span>
+            </a>
+      </li>
+    </ul>
+  </div>
+  <div [class]="isTabContentActive(1)">
+    <h3 class="subtitle">Contact Information</h3>
+    <div class="clearfix">
+      <div class="col-6">
+        <input class="input" type="text" title="First Name" placeholder="First Name">
+      </div>
+      <div class="col-6">
+        <input class="input" type="text" title="Last Name" placeholder="Last Name">
+      </div>
+      <div class="col-6">
+        <input class="input" type="text" title="Middle Name" placeholder="Middle Name">
+      </div>
+      <div class="col-6">
+        <input class="input" type="text" title="Skype ID" placeholder="Skype ID">
+      </div>
+      <div class="col-6">
+        <input class="input" type="text" title="Mobile Number" placeholder="Mobile Number">
+      </div>
+      <div class="col-6">
+        <input class="input" type="text" title="Home Number" placeholder="Home Number">
+      </div>
+      <div class="col-6">
+        <input class="input" type="text" title="Email1" placeholder="Email1">
+      </div>
+      <div class="col-6">
+        <input class="input" type="text" title="Email2" placeholder="Email2">
       </div>
       <div class="clearfix">
         <!-- <h3 class="subtitle clearfix">Employment</h3> -->
@@ -68,6 +93,8 @@
             </select>
           </div>
         </div>
+      </div>
+      <div class="clearfix">
         <div class="col-6">
           <div class='select full-width'>
             <select class="full-width" title="Work Authorization">
@@ -107,238 +134,236 @@
             </select>
           </div>
         </div>
-        <div class="col-6">
-          <div>Employment Type</div>
-          <div class="half-width">
-            <input type="checkbox" /> Full Time</div>
-          <div class="half-width">
-            <input type="checkbox" /> Part Time</div>
-          <div class="half-width">
-            <input checked type="checkbox" /> Contract – C2C</div>
-          <div class="half-width">
-            <input type="checkbox" /> Contract – 1099</div>
-          <div class="half-width">
-            <input type="checkbox" /> Contract – W2</div>
-          <div class="half-width">
-            <input type="checkbox" /> Contract to Hire</div>
-        </div>
-        <div class="col-6">
-          <input type="checkbox"  placeholder="Relocation">Relocation
-        </div>
-      </div>
-      <hr />
-      <div class="clearfix">
-        <div class="col-6">
-          <div>
-            <input type="checkbox" title="Relocation" placeholder="Relocation">Security Clearance
-          </div>
-          <div>
-            <input type="checkbox"  placeholder="Relocation">Willing To Travel
-          </div>
-          <div>
-            <input type="checkbox"  placeholder="Relocation">Private
-          </div>
-        </div>
-        <div class="col-6">
-          Address : <span class="link" (click)="openAddressDialog()">edit</span>
-          <div>404 Lane,</div>
-          <div>405 Streen,</div>
-          <div>LA,USA,50065</div>
-        </div>
       </div>
       <div class="clearfix">
         <div class="col-6">
           <div class="select full-width">
-            <select class="full-width" title="Owner">
-              <option>Select Owner</option>
-              <option>Owner1</option>
-              <option>Owner2</option>
+            <select class="select full-width" title="Employment Type">
+              <option>
+                <input type="checkbox" /> Full Time</option>
+              <option>
+                <input type="checkbox" /> Part Time</option>
+              <option>
+                <input type="checkbox" /> Contract – C2C</option>
+              <option>
+                <input type="checkbox" /> Contract – 1099</option>
+              <option>
+                <input type="checkbox" /> Contract – W2</option>
+              <option>
+                <input type="checkbox" /> Contract to Hire</option>
             </select>
           </div>
         </div>
         <div class="col-6">
-          <div class="select full-width">
-            <select class="full-width" title="select source">
-              <option>Select Source</option>
-              <option>Import</option>
-              <option>Job Board</option>
-              <option>Internal</option>
-              <option>Vendors</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-6">
-          <input class="input" title="User Id" placeholder="User Id">
-        </div>
-        <div class="col-6">
-          <div class="select full-width">
-            <select class="full-width" title="select candidate status">
-              <option>Candidate Status</option>
-              <option>Active</option>
-              <option>Archived</option>
-              <option>Bench</option>
-              <option>Employees</option>
-              <option>Ex-Employees</option>
-              <option>Sub Contractors</option>
-            </select>
-          </div>
+          <input class="input" placeholder="Relocation">
         </div>
       </div>
-      <div class="text-center">
-        <button type="button" class="right button is-primary">Finish</button>
+    </div>
+    <hr />
+    <div class="clearfix">
+      <div class="col-6">
+        <div>
+          <input type="checkbox" title="Relocation" placeholder="Relocation">Security Clearance
+        </div>
+        <div>
+          <input type="checkbox" placeholder="Relocation">Willing To Travel
+        </div>
+        <div>
+          <input type="checkbox" placeholder="Relocation">Private
+        </div>
       </div>
-    </mat-step>
-    <mat-step formGroupName="1">
-      <ng-template matStepLabel>Tab 2</ng-template>
-      <div class="clearfix">
-        <h3>Details</h3>
-        <div class="section clearfix">
-          <div class="clearfix section-header">
-            <div class="half-width section-title">Primary Skills</div>
-          </div>
-          <div class="half-width">
-            <input type="" name="" class="input mb-10" title="Skill" placeholder="Skill">
-            <input type="" name="" class="input mb-10" title="No of years" placeholder="No of years">
-            <button class="button is-primary" type="button">Add Skill</button>
-          </div>
+      <div class="col-6">
+        Address : <span class="link" (click)="openAddressDialog()">edit</span>
+        <div>404 Lane,</div>
+        <div>405 Streen,</div>
+        <div>LA,USA,50065</div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <div class="col-6">
+        <div class="select full-width">
+          <select class="full-width" title="Owner">
+            <option>Select Owner</option>
+            <option>Owner1</option>
+            <option>Owner2</option>
+          </select>
         </div>
-        <div class="section">
-          <div class="clearfix section-header">
-            <div class="half-width section-title">Resume</div>
-            <div class="right link" (click)="openDialog()">Add More</div>
-          </div>
-          <table class="full-width">
-            <thead>
-              <tr>
-                <th>Attachment</th>
-                <th>Source</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  Resume1.docx
-                </td>
-                <td>
-                  Direct Sourcing
-                </td>
-                <td>
-                  <mat-icon>create</mat-icon>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Resume2.docx
-                </td>
-                <td>
-                  Indirect Sourcing
-                </td>
-                <td>
-                  <mat-icon>create</mat-icon>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+      <div class="col-6">
+        <div class="select full-width">
+          <select class="full-width" title="select source">
+            <option>Select Source</option>
+            <option>Import</option>
+            <option>Job Board</option>
+            <option>Internal</option>
+            <option>Vendors</option>
+          </select>
         </div>
-        <div class="section">
-          <div class="clearfix section-header">
-            <div class="half-width section-title">Documents</div>
-            <div class="right link">Add More</div>
-          </div>
-          No Records Found
+      </div>
+      <div class="col-6">
+        <input class="input" title="User Id" placeholder="User Id">
+      </div>
+      <div class="col-6">
+        <div class="select full-width">
+          <select class="full-width" title="select candidate status">
+            <option>Candidate Status</option>
+            <option>Active</option>
+            <option>Archived</option>
+            <option>Bench</option>
+            <option>Employees</option>
+            <option>Ex-Employees</option>
+            <option>Sub Contractors</option>
+          </select>
         </div>
-        <div class="section">
-          <div class="clearfix section-header">
-            <div class="half-width section-title">Work Experience</div>
-            <div class="right link">Add More</div>
-          </div>
-          <table class="full-width">
-            <thead>
-              <tr>
-                <th>Employer</th>
-                <th>Title</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>City</th>
-                <th>Country</th>
-                <th>State</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  Tenet Health Care
-                </td>
-                <td>
-                  Sr. Java Developer
-                </td>
-                <td>
-                  08/01/2018
-                </td>
-                <td>
-                  07/01/2019
-                </td>
-                <td>
-                  Chicago
-                </td>
-                <td>
-                  USA
-                </td>
-                <td>
-                  Atalanta
-                </td>
-                <td>
-                  <mat-icon>create</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  Newtech Inc
-                </td>
-                <td>
-                  Sr. Java Architect
-                </td>
-                <td>
-                  08/01/2018
-                </td>
-                <td>
-                  07/01/2019
-                </td>
-                <td>
-                  Chicago
-                </td>
-                <td>
-                  USA
-                </td>
-                <td>
-                  Atalanta
-                </td>
-                <td>
-                  <mat-icon>create</mat-icon>
-                  <mat-icon>delete</mat-icon>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="section">
-          <div class="clearfix section-header">
-            <div class="half-width section-title">Education Details</div>
-            <div class="right link">Add More</div>
-          </div>
-          No Records Found
-        </div>
-        <div class="section">
-          <div class="clearfix section-header">
-            <div class="half-width section-title">Social Links</div>
-            <div class="right link">Add More</div>
-          </div>
-          No Records Found
-        </div>
-        <!-- <div class="section">
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="button" class="right button is-primary">Finish</button>
+    </div>
+  </div>
+  <div [class]="isTabContentActive(2)">
+    <h3>Details</h3>
+    <div class="section clearfix">
+      <div class="clearfix section-header">
+        <div class="half-width section-title">Primary Skills</div>
+      </div>
+      <div class="half-width">
+        <input type="" name="" class="input mb-10" title="Skill" placeholder="Skill">
+        <input type="" name="" class="input mb-10" title="No of years" placeholder="No of years">
+        <button class="button is-primary" type="button">Add Skill</button>
+      </div>
+    </div>
+    <div class="section">
+      <div class="clearfix section-header">
+        <div class="half-width section-title">Resume</div>
+        <div class="right link" (click)="openDialog()">Add More</div>
+      </div>
+      <table class="full-width">
+        <thead>
+          <tr>
+            <th>Attachment</th>
+            <th>Source</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Resume1.docx
+            </td>
+            <td>
+              Direct Sourcing
+            </td>
+            <td>
+              <mat-icon>create</mat-icon>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Resume2.docx
+            </td>
+            <td>
+              Indirect Sourcing
+            </td>
+            <td>
+              <mat-icon>create</mat-icon>
+              <mat-icon>delete</mat-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="section">
+      <div class="clearfix section-header">
+        <div class="half-width section-title">Documents</div>
+        <div class="right link">Add More</div>
+      </div>
+      No Records Found
+    </div>
+    <div class="section">
+      <div class="clearfix section-header">
+        <div class="half-width section-title">Work Experience</div>
+        <div class="right link">Add More</div>
+      </div>
+      <table class="full-width">
+        <thead>
+          <tr>
+            <th>Employer</th>
+            <th>Title</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Tenet Health Care
+            </td>
+            <td>
+              Sr. Java Developer
+            </td>
+            <td>
+              08/01/2018
+            </td>
+            <td>
+              07/01/2019
+            </td>
+            <td>
+              Chicago
+            </td>
+            <td>
+              Atalanta
+            </td>
+            <td>
+              <mat-icon>create</mat-icon>
+              <mat-icon>delete</mat-icon>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Newtech Inc
+            </td>
+            <td>
+              Sr. Java Architect
+            </td>
+            <td>
+              08/01/2018
+            </td>
+            <td>
+              07/01/2019
+            </td>
+            <td>
+              Chicago
+            </td>
+            <td>
+              Atalanta
+            </td>
+            <td>
+              <mat-icon>create</mat-icon>
+              <mat-icon>delete</mat-icon>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="section">
+      <div class="clearfix section-header">
+        <div class="half-width section-title">Education Details</div>
+        <div class="right link">Add More</div>
+      </div>
+      No Records Found
+    </div>
+    <div class="section">
+      <div class="clearfix section-header">
+        <div class="half-width section-title">Social Links</div>
+        <div class="right link">Add More</div>
+      </div>
+      No Records Found
+    </div>
+    <!-- <div class="section">
           <div class="clearfix section-header">
             <div class="half-width section-title">Reference Details</div>
             <div class="right link">Add More</div>
@@ -352,120 +377,112 @@
           </div>
           No Records Found
         </div> -->
+    <div class="text-center">
+      <button type="button" class="right button is-primary">Finish</button>
+    </div>
+  </div>
+  <div [class]="isTabContentActive(3)">
+    <h3>HR</h3>
+    <div class="clearfix">
+      <div class="col-6">
+        <input class="input" type="date" title="DOB" placeholder="DOB">
       </div>
-      <div class="text-center">
-        <button type="button" class="right button is-primary">Finish</button>
+      <div class="col-6">
+        <input class="input" title="SSN" placeholder="SSN">
       </div>
-    </mat-step>
-    <mat-step formGroupName="2">
-      <ng-template matStepLabel>Tab 3</ng-template>
-      <div class="clearfix">
-        <h3>HR</h3>
-        <div class="col-6">
-          <input class="input" type="date" title="DOB" placeholder="DOB">
-        </div>
-        <div class="col-6">
-          <input class="input" title="SSN" placeholder="SSN">
-        </div>
-        <div class="col-6">
-          <input class="input" type="date" title="DOE" placeholder="DOE">
-        </div>
-        <div class="col-6">
-          <input class="input" type="date" title="DOT" placeholder="DOT">
-        </div>
-        <div class="col-6">
-          <input class="input" title="Hourly Salary" placeholder="Hourly Salary">
-        </div>
-        <div class="col-6">
-          <input class="input" title="Annual Salary" placeholder="Annual Salary">
-        </div>
-        <div class="col-6">
-          <input class="input" title="Bonus" placeholder="Bonus">
-        </div>
+      <div class="col-6">
+        <input class="input" type="date" title="DOE" placeholder="DOE">
       </div>
-      <div class="full-width clearfix pl-50 pr-50">
-        <div class="clearfix">Notes</div>
-        <textarea rows="10" class="full-width" value="11/05/2018 - 20:05 --">
-          11/05/2018 - 20:05 --
-        </textarea>
+      <div class="col-6">
+        <input class="input" type="date" title="DOT" placeholder="DOT">
       </div>
-      <div>
-        <button type="button" class="right button is-primary">Finish</button>
+      <div class="col-6">
+        <input class="input" title="Hourly Salary" placeholder="Hourly Salary">
       </div>
-    </mat-step>
-    <mat-step formGroupName="3">
-      <ng-template matStepLabel>Tab 4</ng-template>
-      <div class="clearfix">
-        <h3>Immigration</h3>
-        <div class="col-6">
-          <div class='select full-width'>
-            <select class="full-width">
-              <option>Work Authorization</option>
-              <option>US Citizen</option>
-              <option>Green Card</option>
-              <option>EAD</option>
-              <option>TN Permit Holder</option>
-              <option>Have H1 Visa</option>
-              <option>Need H1 Visa</option>
-              <option>OPT/CPT</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-6">
-          <input class="input" type="date" title="Visa Expiry" placeholder="Visa Expiry">
-        </div>
-        <div class="col-6">
-          <input class="input" type="date" title="LCA Amend/Ext Filed Date" placeholder="LCA Amend/Ext Filed Date">
-        </div>
-        <div class="col-6">
-          <input class="input" title="Location" placeholder="Location">
-        </div>
-        <div class="col-6">
-          <input class="input" type="date" title="Labor/GC filed Date" placeholder="Labor/GC filed Date">
-        </div>
-        <div class="col-6">
-          <input class="input" title="Status of Labor/GC" placeholder="Status of Labor/GC">
-          <div class='select full-width'>
-            <select class="full-width">
-              <option>Status of Labor/GC</option>
-              <option>Started Advertisement</option>
-              <option>Filed Labor</option>
-              <option>Labor Approved</option>
-              <option>Filed I-140</option>
-              <option>I-140 Approved</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-6">
-          <input class="input" type="date" title="I-485 filed Date" placeholder="I-485 filed Date">
-        </div>
-        <div class="col-6">
-          <div class="select full-width">
-            <select class="full-width">
-              <option>Status of I-485</option>
-              <option>I-145 in Process</option>
-              <option>Filed for EAD</option>
-              <option>EAD approved</option>
-              <option>I-485 Approved</option>
-            </select>
-          </div>
+      <div class="col-6">
+        <input class="input" title="Annual Salary" placeholder="Annual Salary">
+      </div>
+      <div class="col-6">
+        <input class="input" title="Bonus" placeholder="Bonus">
+      </div>
+    </div>
+    <div class="full-width clearfix pl-50 pr-50">
+      <div class="clearfix">Notes<span class="link ml-20"> Add Time stamp</span></div>
+      <textarea rows="10" class="full-width" value="11/05/2018 - 20:05 --">
+      </textarea>
+    </div>
+    <div>
+      <button type="button" class="right button is-primary">Finish</button>
+    </div>
+  </div>
+  <div [class]="isTabContentActive(4)">
+    <h3>Immigration</h3>
+    <div class="clearfix">
+      <div class="col-6">
+        <div class='select full-width'>
+          <select class="full-width">
+            <option>Work Authorization</option>
+            <option>US Citizen</option>
+            <option>Green Card</option>
+            <option>EAD</option>
+            <option>TN Permit Holder</option>
+            <option>Have H1 Visa</option>
+            <option>Need H1 Visa</option>
+            <option>OPT/CPT</option>
+          </select>
         </div>
       </div>
-      <div class="text-center">
-        <button type="button" class="right button is-primary">Finish</button>
+      <div class="col-6">
+        <input class="input" type="date" title="Visa Expiry" placeholder="Visa Expiry">
       </div>
-    </mat-step>
-    <mat-step formGroupName="4">
-      <ng-template matStepLabel>Tab 5</ng-template>
-      <div class="full-width clearfix pl-50 pr-50">
-        <div class="clearfix">Notes</div>
-        <textarea rows="10" class="full-width" value="11/05/2018 - 20:05 --">
-          11/05/2018 - 20:05 --
-        </textarea>
+      <div class="col-6">
+        <input class="input" type="date" title="LCA Amend/Ext Filed Date" placeholder="LCA Amend/Ext Filed Date">
       </div>
-      <div>
-        <button mat-button matStepperNext type="button" class="right">Finish</button>
+      <div class="col-6">
+        <input class="input" title="Location" placeholder="Location">
       </div>
-    </mat-step>
-  </mat-horizontal-stepper>
+      <div class="col-6">
+        <input class="input" type="date" title="Labor/GC filed Date" placeholder="Labor/GC filed Date">
+      </div>
+      <div class="col-6">
+        <div class='select full-width'>
+          <select class="full-width">
+            <option>Status of Labor/GC</option>
+            <option>Started Advertisement</option>
+            <option>Filed Labor</option>
+            <option>Labor Approved</option>
+            <option>Filed I-140</option>
+            <option>I-140 Approved</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+      <div class="col-6">
+        <input class="input" type="date" title="I-485 filed Date" placeholder="I-485 filed Date">
+      </div>
+      <div class="col-6">
+        <div class="select full-width">
+          <select class="full-width">
+            <option>Status of I-485</option>
+            <option>I-145 in Process</option>
+            <option>Filed for EAD</option>
+            <option>EAD approved</option>
+            <option>I-485 Approved</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="button" class="right button is-primary">Finish</button>
+    </div>
+  </div>
+  <div [class]=isTabContentActive(5)>
+    <div class="clearfix">Notes<span class="link ml-20"> Add Time stamp</span></div>
+    <textarea rows="10" class="full-width" value="">
+    </textarea>
+    <div>
+      <button type="button" class="button is-primary right">Finish</button>
+    </div>
+  </div>
 </div>
