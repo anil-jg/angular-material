@@ -14,14 +14,15 @@ import {MatNativeDateModule} from '@angular/material'
 
 
 import { AppComponent } from './app.component';
-import { AppDialog } from './app.component';
+import { AppDialog,AppAddressDialog } from './app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppDialog
+    AppDialog,
+    AppAddressDialog
   ],
-  entryComponents: [AppDialog],
+  entryComponents: [AppDialog,AppAddressDialog],
   imports: [
     BrowserModule,
     MatStepperModule,

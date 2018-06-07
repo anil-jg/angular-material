@@ -14,6 +14,10 @@ export class AppComponent {
   	let dialogRef = this.dialog.open(AppDialog, {
       width: '600px'});
   }
+  openAddressDialog():void {
+    let dialogRef = this.dialog.open(AppAddressDialog, {
+      width: '600px'});
+  }
 }
 
 @Component({
@@ -21,6 +25,22 @@ export class AppComponent {
   templateUrl: 'app-dialog.html',
 })
 export class AppDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<AppDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: any) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
+}
+
+@Component({
+  selector: 'AppAddressDialog',
+  templateUrl: 'app-address-dialog.html',
+})
+export class AppAddressDialog {
 
   constructor(
     public dialogRef: MatDialogRef<AppDialog>,
