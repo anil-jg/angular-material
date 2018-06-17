@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {MatStepperModule } from '@angular/material';
 import {MatButtonModule} from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -11,7 +12,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material'
-
+import { ChartsModule } from 'ng2-charts'
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AppDialog,AppAddressDialog } from './app.component';
@@ -34,7 +36,10 @@ import { AppDialog,AppAddressDialog } from './app.component';
     MatDialogModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatGridListModule,
+    ChartsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
