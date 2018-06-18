@@ -14,6 +14,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material'
 import { ChartsModule } from 'ng2-charts'
 import { FormsModule } from '@angular/forms';
+import {MatSortModule} from '@angular/material/sort';
+import {MatSort, MatTableDataSource} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppDialog,AppAddressDialog } from './app.component';
@@ -39,7 +41,8 @@ import { AppDialog,AppAddressDialog } from './app.component';
     MatNativeDateModule,
     MatGridListModule,
     ChartsModule,
-    FormsModule
+    FormsModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { Component,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import { FormsModule } from '@angular/forms'
+import {Sort} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,19 @@ export class AppComponent {
   mapObject:any ={};
   objArr:Array<any> =[];
   selectedValue:Array<string> = [];
-  constructor(){
+  desserts = [
+    {name: 'Frozen yogurt', calories: '159', fat: '6', carbs: '24', protein: '4'},
+    {name: 'Ice cream sandwich', calories: '237', fat: '9', carbs: '37', protein: '4'},
+    {name: 'Eclair', calories: '262', fat: '16', carbs: '24', protein: '6'},
+    {name: 'Cupcake', calories: '305', fat: '4', carbs: '67', protein: '4'},
+    {name: 'Gingerbread', calories: '356', fat: '16', carbs: '49', protein: '4'},
+  ];
 
+  sortedData;
+
+  constructor() {
+    this.sortedData = this.desserts.slice();
   }
-
 
 public changeListener(files: FileList) {
   // console.log(files);
@@ -58,74 +68,81 @@ createObj(){
 compareFn(){
   
 }
- //  activetab:number = 1
-	// constructor(public dialog: MatDialog){
-
-	// }
- //  isActive(num){
- //    return num==this.activetab?"is-active":"";
- //  }
- //  isTabContentActive(num){
- //    return num==this.activetab?"tab-content is-active clearfix":"tab-content";
- //  }
- //  changeTab(num){
- //   this.activetab = num; 
- //  }
- //  openDialog():void {
- //  	let dialogRef = this.dialog.open(AppDialog, {
- //      width: '600px'});
- //  }
- //  openAddressDialog():void {
- //    let dialogRef = this.dialog.open(AppAddressDialog, {
- //      width: '600px'});
- //  }
- //  public barChartOptions:any = {
- //    scaleShowVerticalLines: false,
- //    responsive: true
- //  };
- //  public barChartLabels:string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
- //  public barChartType:string = 'bar';
- //  public barChartLegend:boolean = true;
+  public barChartOptions:any = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels:string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartType:string = 'bar';
+  public barChartLegend:boolean = true;
  
- //  public barChartData:any[] = [
- //    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
- //    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
- //  ];
+  public barChartData:any[] = [
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'},
+    {data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B'}
+  ];
  
- //  // events
- //  public chartClicked(e:any):void {
- //    console.log(e);
- //  }
+  // events
+  public chartClicked(e:any):void {
+    console.log(e);
+  }
  
- //  public chartHovered(e:any):void {
- //    console.log(e);
- //  }
+  public chartHovered(e:any):void {
+    console.log(e);
+  }
  
- //  public randomize():void {
- //    // Only Change 3 values
- //    let data = [
- //      Math.round(Math.random() * 100),
- //      59,
- //      80,
- //      (Math.random() * 100),
- //      56,
- //      (Math.random() * 100),
- //      40];
- //    let clone = JSON.parse(JSON.stringify(this.barChartData));
- //    clone[0].data = data;
- //    this.barChartData = clone;
- //  }
- //  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
- //  public doughnutChartData:number[] = [350, 450, 100];
- //  public doughnutChartType:string = 'doughnut';
- //  public pieChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
- //  public pieChartData:number[] = [300, 500, 100];
- //  public pieChartType:string = 'pie';
+  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartType:string = 'doughnut';
+  public pieChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
+  public pieChartData:number[] = [300, 500, 100];
+  public pieChartType:string = 'pie';
 
+  public lineChartData:Array<any> = [
+    {data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A'}
+  ];
+  public lineChartLabels:Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartOptions:any = {
+    responsive: true
+  };
+  public lineChartColors:Array<any> = [
+    { // grey
+      backgroundColor: 'rgba(148,159,177,0.2)',
+      borderColor: 'rgba(148,159,177,1)',
+      pointBackgroundColor: 'rgba(148,159,177,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+    }
+  ];
+  public lineChartLegend:boolean = true;
+  public lineChartType:string = 'line';
 
+sortData(sort: Sort) {
+    const data = this.desserts.slice();
+    if (!sort.active || sort.direction == '') {
+      this.sortedData = data;
+      return;
+    }
 
-
+    this.sortedData = data.sort((a, b) => {
+      let isAsc = sort.direction == 'asc';
+      switch (sort.active) {
+        case 'name': return compare(a.name, b.name, isAsc);
+        case 'calories': return compare(+a.calories, +b.calories, isAsc);
+        case 'fat': return compare(+a.fat, +b.fat, isAsc);
+        case 'carbs': return compare(+a.carbs, +b.carbs, isAsc);
+        case 'protein': return compare(+a.protein, +b.protein, isAsc);
+        default: return 0;
+      }
+    });
+  }
 }
+
+
+function compare(a, b, isAsc) {
+  return (a < b ? -1 : 1) * (isAsc ? 1 : -1);
+}
+
 
 
 
